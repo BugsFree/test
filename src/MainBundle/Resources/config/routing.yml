@@ -1,0 +1,9 @@
+main_homepage:
+    path:     /
+    defaults: { _controller: MainBundle:Default:index }
+Page_Admin:
+    path:     /admin
+    defaults: { _controller: MainBundle:Default:Admin }
+Page_User:
+    path:     /user
+    defaults: { _controller: MainBundle:Default:Admin }

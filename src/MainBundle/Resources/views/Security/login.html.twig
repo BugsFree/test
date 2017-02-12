@@ -1,0 +1,65 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+
+    <div class="container">
+
+        <div class="row" style="margin-top:20px">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                <form action="{{ path("fos_user_security_check") }}" method="post">
+
+                        <h2>authentification </h2>
+                        <div class="text-center col-md-12">
+                            {% if error %}
+                                <p class="bg-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</p>
+                            {% endif %}
+
+                            <hr class="colorgraph">
+
+
+
+                            <div class="input-field col s12">
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+                                <div class="input-field col s12">
+
+                                    <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}" required="required"  placeholder="email"/>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input type="password"  class="form-control" id="password" name="_password" required="required" placeholder="password" />
+                                </div>
+                                <div class="input-field col s12">                                    <label for="remember_me">remember me</label>
+                                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                                </div>
+
+
+
+                                <hr class="colorgraph">
+                                <div display="inline">
+
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                            <button class="btn btn-lg btn-success btn-block" type="submit" name="action" id="line">
+                                                submit</button></div>
+
+
+
+                                        <div class="col-xs-6 col-sm-6 col-md-6">
+                                            <a href="{{path('fos_user_registration_register')}}" class="btn btn-lg btn-primary btn-block" id="line">Register</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 col-md-offset-0">
+                                        </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+{% endblock fos_user_content %}

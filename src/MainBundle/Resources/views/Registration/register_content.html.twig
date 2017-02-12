@@ -1,0 +1,98 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title-site text-center"> REGISTER </h3>
+        </div>
+
+
+
+        <div class="form-group reg-username">
+            <div>
+                <strong>login:</strong><br>
+                {{ form_widget(form.username,{ 'attr': {'class': "form-control input",'size':"20",
+                    'placeholder': "nom"} }) }}
+
+
+                {{ form_errors(form.username) }}
+            </div>  </div>
+
+        <div class="form-group reg-email">
+            <div>
+                <strong>email:</strong><br>
+
+                {{ form_widget(form.email,{ 'attr': {'class': "form-control input",'size':"20",
+                    'placeholder': "adresse email"} }) }}
+
+                {{ form_errors(form.email) }}
+
+            </div>
+        </div>
+        <div class="form-group reg-password">
+            <div>
+                <strong>mot de passe :</strong><br>
+
+                {{ form_widget(form.plainPassword.first,{ 'attr': {'class': "form-control input",'size':"20",
+                    'placeholder': "mot de passe"} }) }}
+
+
+                {{ form_errors(form.plainPassword.first) }}
+            </div>   </div>
+
+        <div class="form-group reg-password">
+            <div>
+                <strong> confirmation :</strong><br>
+                {{ form_widget(form.plainPassword.second,{ 'attr': {'class': "form-control input",'size':"20",
+                    'placeholder': "verification"} }) }}
+
+                {{ form_errors(form.plainPassword.second) }}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-field col s12">
+
+                <strong> sexe :</strong><br>
+                {{ form_widget(form.sexe,{ 'attr': {'class': "span12",
+                    'placeholder': " sexe"} }) }}
+            </div>
+            {{ form_errors(form.sexe) }}
+        </div>
+
+
+        <div class="form-group">
+
+            {{ form_label(form.datenaissance) }}
+            {{ form_widget(form.datenaissance,{ 'attr': {'class': "span12",
+                'placeholder': " ",value:""} }) }}
+        </div>
+        {{ form_errors(form.datenaissance) }}
+
+        <div class="form-group">
+
+            {{ form_label(form.nom) }}
+            {{ form_widget(form.nom,{ 'attr': {'class': "span12",
+                'placeholder': " ",value:""} }) }}
+        </div>
+        {{ form_errors(form.datenaissance) }}
+
+        <div class="text-center">
+            <input type="submit" class="btn btn-success"  value="register" />
+
+        </div>
+        {{ form_end(form) }}
+
+
+    </div>
+    </div>
+
+
+
+
+

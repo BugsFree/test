@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <title>TSHOP - Bootstrap E-Commerce Parallax Theme</title>
+    <!-- Bootstrap core CSS -->
+
+    <link href="{{asset('bundles/eshop/assets/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{asset('bundles/eshop/assets/bootstrap/css/add.css')}}" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="{{asset('bundles/eshop/assets/css/style.css')}}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- include pace script for automatic web page progress bar  -->
+
+    <script>
+        paceOptions = {
+            elements: true
+        };
+    </script>
+    <script src="{{asset('assets/js/pace.min.js')}}"></script>
+</head>
+
+<body>
+{% include 'MainBundle:eshop:header.html.twig' %}
+
+
+<div class="container main-container">
+
+    <!-- Main component call to action -->
+    <div class="container m-t-2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Demo Features Content end -->
+
+    <!-- Main component call to action -->
+
+
+
+
+
+
+              {% block content %}
+    {% endblock  %}
+
+
+
+
+
+</div>
+
+</div>
+<!--main-container-->
+
+{% include 'MainBundle:eshop:footer.html.twig' %}
+
+
+
+
+<!-- Le javascript
+================================================== -->
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
+<script>
+    // this script required for subscribe modal
+    $(window).load(function () {
+        // full load
+        $('#modalAds').modal('show');
+        $('#modalAds').removeClass('hide');
+    });
+
+</script>
+
+<!-- include jqueryCycle plugin -->
+<script src="{{asset('assets/js/jquery.cycle2.min.js')}}"></script>
+
+<!-- include easing plugin -->
+<script src="{{asset('assets/js/jquery.easing.1.3.js')}}"></script>
+
+<!-- include  parallax plugin -->
+<script type="text/javascript" src="{{asset('assets/js/jquery.parallax-1.1.js')}}"></script>
+
+<!-- optionally include helper plugins -->
+<script type="text/javascript" src="{{asset('assets/js/helper-plugins/jquery.mousewheel.min.js')}}"></script>
+
+<!-- include mCustomScrollbar plugin //Custom Scrollbar  -->
+
+<script type="text/javascript" src="{{asset('assets/js/jquery.mCustomScrollbar.js')}}"></script>
+
+<!-- include icheck plugin // customized checkboxes and radio buttons   -->
+<script type="text/javascript" src="{{asset('assets/plugins/icheck-1.x/icheck.min.js')}}"></script>
+
+<!-- include grid.js // for equal Div height  -->
+<script src="{{asset('assets/js/grids.js')}}"></script>
+
+<!-- include carousel slider plugin  -->
+<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+
+<!-- jQuery select2 // custom select   -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+
+<!-- include touchspin.js // touch friendly input spinner component   -->
+<script src="{{asset('assets/js/bootstrap.touchspin.js')}}"></script>
+
+<!-- include custom script for only homepage  -->
+<script src="{{asset('assets/js/home.js')}}"></script>
+<!-- include custom script for site  -->
+<script src="{{asset('assets/js/script.js')}}"></script>
+<script>
+
+</script>
+</body>
+</html>
